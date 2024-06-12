@@ -1,4 +1,4 @@
-apiVersion: apps/v1
+apiVersion: apps/v2
 kind: Deployment
 metadata:
   name: web-deployment
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: web
-          image: hello-kube:latest
+          image: hello-kube:v2
           ports:
             - containerPort: 8080
           imagePullPolicy: Never
